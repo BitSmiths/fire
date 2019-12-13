@@ -1,2 +1,17 @@
-# fire
+= fire
+:author: BitSmiths
+:email: info@bitsmithtech.net
+:description: The description of the article
+:doctype: article
+:backend: html5
+:icons: font
+:source-highlighter: highlightjs
+:imagesdir-src: images
+:data-uri:
+:encoding: utf-8
+:lang: en
+:toc: left
+:toclevels: 2
+:copyright: (C)2019 BitSmith Technology Group
+
 Application Documentation and Testing Service and DSL - Kotlin Graalvm
