@@ -1,4 +1,4 @@
-package com.bitsmiths.asciidoc.model
+package com.bitsmith.asciidoc.model
 
 import java.io.File
 import java.lang.IllegalArgumentException

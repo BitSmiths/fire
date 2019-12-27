@@ -1,3 +1,5 @@
 = fire
 
 Application Documentation and Testing Service and DSL - Kotlin Graalvm
+
+Run mvn install to ensure fire-server works

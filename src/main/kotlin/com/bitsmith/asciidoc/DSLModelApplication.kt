@@ -1,6 +1,6 @@
-package com.bitsmiths.asciidoc
+package com.bitsmith.asciidoc
 
-import com.bitsmiths.asciidoc.model.restDocTest
+import com.bitsmith.asciidoc.model.restDocTest
 
 
 
@@ -23,10 +23,10 @@ fun printIt() {
             with payloadDocumentationCsvFile ""*/
 		}
 		responsePayLoadDocumentation {
-			//with responsePaloadDocumentationCsvFile ""
+			//with responsePayloadDocumentationCsvFile ""
 		}
 	}
-	println(t)
+	println(t.testType)
 }
 
 
