@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.bitsmits</groupId>
+	<groupId>com.bitsmith</groupId>
 	<artifactId>restdocdsl</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>asciidoc</name>
@@ -49,33 +49,8 @@
 				</executions>
 			</plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>${maven-jar-plugin.version}</version>
-				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<mainClass>com.bitsmiths.asciidoc.DSLModelApplication</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
 
-			<plugin>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>${maven-shade-plugin.version}</version>
-				<executions>
-					<execution>
-						<id>fat-jar</id>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+
 		</plugins>
 	</build>
 
