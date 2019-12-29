@@ -54,5 +54,11 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>dev-repo</id>
+			<url>https://maven.jetbrains.space/bitsmith/maven</url>
+		</repository>
+	</distributionManagement>
 
 </project>

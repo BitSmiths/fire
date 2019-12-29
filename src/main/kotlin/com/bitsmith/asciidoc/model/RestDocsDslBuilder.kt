@@ -15,7 +15,7 @@ class RestDocTestDSL {
     val with = this
     private val authorization = Authorization()
 
-    private lateinit var url: URL
+     lateinit var url: URL
 
     private lateinit var requestPayLoadPlusDocumentation: RequestPayLoadPlusDocumentation
     private lateinit var responsePayLoadDocumentation: ResponsePayLoadDocumentation
