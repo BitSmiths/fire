@@ -64,18 +64,17 @@ class RestDocTestDSL {
 }
 
 
-
 @RestDocDsl
 class RequestPayLoadPlusDocumentation {
-    private lateinit var payloadRequestFile: File
-    private lateinit var payloadDocumentationCsvFile: File
+    lateinit var payloadRequestFile: File
+    lateinit var payloadDocumentationCsvFile: File
     val with = this
 
     infix fun payloadRequestFile(file: String): RequestPayLoadPlusDocumentation {
         this.payloadRequestFile = File(file)
-        if (!this.payloadRequestFile.exists()) {
+        /*if (!this.payloadRequestFile.exists()) {
             throw IllegalArgumentException("File $file does not exist at this path ${payloadRequestFile.absoluteFile}")
-        }
+        }*/
         return this
     }
 
@@ -91,7 +90,7 @@ class RequestPayLoadPlusDocumentation {
 
 @RestDocDsl
 class ResponsePayLoadDocumentation {
-    private lateinit var responsePaloadDocumentationCsvFile: File
+    lateinit var responsePaloadDocumentationCsvFile: File
     val with = this
 
     infix fun responsePaloadDocumentationCsvFile(file: String): ResponsePayLoadDocumentation {
