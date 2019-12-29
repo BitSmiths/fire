@@ -6,13 +6,26 @@ class RestDocDslValidation {
     fun validate(restDocTestDSL: RestDocTestDSL): ValidationResults {
         val validationResults = ValidationResults()
 
-        when (restDocTestDSL.testType) {
-            null -> {
+        try {
+            if (restDocTestDSL.testType == null) {
                 validationResults.addError(ValidationErrorResult("testType", "testType is required"))
             }
+        } catch (e: Exception) {
+            validationResults.addError(ValidationErrorResult("testType", e.message!!))
         }
-        if(restDocTestDSL.url == null) {
-            validationResults.addError(ValidationErrorResult("url", "url is required"))
+        try {
+            if (restDocTestDSL.url == null) {
+                validationResults.addError(ValidationErrorResult("url", "url is required"))
+            }
+        } catch (e: Exception) {
+            validationResults.addError(ValidationErrorResult("url", e.message!!))
+        }
+        try {
+            if (restDocTestDSL.authorization != null && restDocTestDSL.authorization.username.isNullOrBlank()) {
+                validationResults.addError(ValidationErrorResult("username", "username is required"))
+            }
+        } catch (e: Exception) {
+            validationResults.addError(ValidationErrorResult("username", e.message!!))
         }
         return validationResults
     }
@@ -27,6 +40,7 @@ class ValidationResults {
     fun hasError(): Boolean {
         return results.size > 0
     }
+
     fun addError(validationResult: ValidationResult) {
         results.add(validationResult)
     }
